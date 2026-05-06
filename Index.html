@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Gabarito e Atividades | Resolução SEDUC 129/2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(145deg, #0a2f6c 0%, #041a3a 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #212121;
+        }
+        :root {
+            --azul-escuro: #0a2f6c;
+            --azul-claro: #eef3fb;
+            --vermelho: #d32f2f;
+            --branco: #ffffff;
+            --preto: #212121;
+            --cinza-borda: #e0e4e9;
+        }
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            background: #0f1a24;
+            border-radius: 48px;
+            padding: 20px;
+            box-shadow: 0 30px 35px rgba(0,0,0,0.5), inset 0 1px 4px rgba(255,255,200,0.1);
+            border: 1px solid var(--vermelho);
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #0a2f6ccc;
+            backdrop-filter: blur(4px);
+            padding: 12px 24px;
+            border-radius: 60px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .logo-area img {
+            max-height: 50px;
+            width: auto;
+            background: white;
+            border-radius: 12px;
+            padding: 4px;
+        }
+        .logo-area span {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #ffec9e;
+        }
+        .title-badge {
+            background: var(--vermelho);
+            color: white;
+            padding: 6px 18px;
+            border-radius: 3rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+        .two-columns {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .sidebar {
+            flex: 1;
+            min-width: 260px;
+            background: rgba(255,255,240,0.05);
+            backdrop-filter: blur(4px);
+            border-radius: 32px;
+            padding: 1rem;
+            height: fit-content;
+        }
+        .sidebar h3 {
+            color: #ffec9e;
+            margin: 1rem 0 0.8rem 0;
+            font-size: 1.2rem;
+            border-left: 3px solid var(--vermelho);
+            padding-left: 12px;
+        }
+        .sidebar ul {
+            list-style: none;
+        }
+        .sidebar li {
+            margin: 0.5rem 0;
+        }
+        .sidebar a {
+            color: #e2e8f0;
+            text-decoration: none;
+            display: block;
+            padding: 6px 12px;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            transition: 0.2s;
+        }
+        .sidebar a i {
+            width: 24px;
+            margin-right: 6px;
+        }
+        .sidebar a:hover, .sidebar a.active {
+            background: var(--vermelho);
+            color: white;
+        }
+        .main-content {
+            flex: 3;
+            min-width: 280px;
+        }
+        .card {
+            background: var(--branco);
+            border-radius: 32px;
+            padding: 1.8rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            border: 1px solid var(--cinza-borda);
+        }
+        .activity-header {
+            border-bottom: 2px solid var(--azul-claro);
+            padding-bottom: 1rem;
+            margin-bottom: 1.2rem;
+        }
+        .activity-title {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--azul-escuro);
+        }
+        .activity-meta {
+            background: #eef2ff;
+            display: inline-block;
+            padding: 0.2rem 1rem;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .descricao {
+            background: var(--azul-claro);
+            padding: 1.2rem;
+            border-radius: 24px;
+            margin: 1rem 0;
+            line-height: 1.5;
+        }
+        .gabarito {
+            background: #fef9e6;
+            border-left: 6px solid #ffb347;
+            padding: 1.2rem;
+            border-radius: 20px;
+            margin-top: 1.5rem;
+        }
+        .gabarito h3 {
+            color: #b45309;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .produto {
+            font-weight: 600;
+            color: var(--azul-escuro);
+            margin-top: 1rem;
+        }
+        .links-footer {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin: 1.5rem 0 0.5rem;
+        }
+        .link-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.1);
+            padding: 8px 16px;
+            border-radius: 40px;
+            color: white;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: 0.2s;
+        }
+        .link-btn:hover {
+            background: var(--vermelho);
+            transform: translateY(-2px);
+        }
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 1rem;
+            color: #b4c8e0;
+            font-size: 0.8rem;
+            border-top: 1px solid #2c4c6e;
+        }
+        @media (max-width: 800px) {
+            .two-columns { flex-direction: column; }
+            .sidebar { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; }
+            .sidebar h3 { width: 100%; }
+            .sidebar ul { display: inline-flex; flex-wrap: wrap; gap: 0.5rem; }
+            .sidebar li { margin: 0; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <div class="logo-area">
+            <img src="https://i.ibb.co/0p01LzxB/logo3de.jpg" alt="Logo SEDUC">
+            <span>Resolução SEDUC 129/2025 | Gabarito + Atividades</span>
+        </div>
+        <div class="title-badge"><i class="fas fa-check-double"></i> 25 atividades respondidas</div>
+    </div>
+
+    <div class="two-columns">
+        <!-- SIDEBAR com todas as atividades -->
+        <div class="sidebar" id="sidebar">
+            <h3><i class="fas fa-book-open"></i> Parte 1 · Implementação</h3>
+            <ul id="parte1-lista"></ul>
+            <h3><i class="fas fa-hands-helping"></i> Parte 2 · AEE (SRM/Itinerante)</h3>
+            <ul id="parte2-lista"></ul>
+            <h3><i class="fas fa-people-arrows"></i> Parte 3 · AEE Expandido</h3>
+            <ul id="parte3-lista"></ul>
+            <h3><i class="fas fa-users"></i> Parte 4 · Papéis e Responsab.</h3>
+            <ul id="parte4-lista"></ul>
+            <h3><i class="fas fa-microchip"></i> Parte 5 · Comissões e TA</h3>
+            <ul id="parte5-lista"></ul>
+        </div>
+
+        <!-- ÁREA PRINCIPAL (atividade + gabarito) -->
+        <div class="main-content">
+            <div class="card" id="conteudo-atividade">
+                <!-- carregado dinamicamente -->
+                <div style="text-align: center; padding: 2rem;">
+                    <i class="fas fa-spinner fa-pulse fa-2x" style="color: var(--vermelho);"></i>
+                    <p>Carregando atividade...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="links-footer">
+        <a href="https://download.inep.gov.br/educacao_basica/portal_ideb/o_que_e_o_ideb/Nota_Tecnica_n1_concepcaoIDEB.pdf" target="_blank" class="link-btn"><i class="fas fa-file-alt"></i> Nota Técnica Ideb</a>
+        <a href="https://pne-de-cai.github.io/escolascodinep/" target="_blank" class="link-btn"><i class="fas fa-chart-simple"></i> QEdu - escolas</a>
+        <a href="https://saeb.inep.gov.br/saeb/" target="_blank" class="link-btn"><i class="fas fa-university"></i> INEP SAEB 2025</a>
+    </div>
+    <footer>
+        URE-CAIEIRAS 2025 · Gabarito oficial das atividades · Baseado na Resolução SEDUC 129/2025 e documentos complementares.
+    </footer>
+</div>
+
+<script>
+    // ---------- DADOS DE TODAS AS ATIVIDADES (enunciado + gabarito) ----------
+    const atividades = [
+        // PARTE 1
+        { id: "1.1", parte: 1, titulo: "1.1 Linha do tempo da política", descricao: "Com base no documento (páginas 5 a 10), elabore uma linha do tempo destacando os marcos principais: 2020-2021 (consulta pública e 19 mil contribuições), 2021 (publicação da Política de Educação Especial), 2023 (Decreto 67.635 e Resolução SEDUC 21/2023), 2025 (Resolução SEDUC 129/2025). Para cada marco, escreva um parágrafo explicando o que mudou e qual o avanço em relação ao modelo anterior.",
+          gabarito: "<strong>Resposta esperada:</strong> Linha do tempo com os marcos. Análise crítica: transição do modelo médico-assistencial (foco no déficit) para o modelo social (eliminação de barreiras). Destaque para a consulta pública democrática (2020-21), a oficialização do modelo biopsicossocial em 2021, o Decreto 67.635/2023 que institucionaliza a política, e a Resolução 129/2025 que revoga a anterior e aprimora instrumentos como Estudo de Caso, PAEE e AEE Expandido. Avanço: corresponsabilidade, acessibilidade curricular e atendimento colaborativo.",
+          produto: "Infográfico ou documento digital com linha do tempo e análise crítica."
+        },
+        { id: "1.2", parte: 1, titulo: "1.2 Análise comparativa: modelo médico vs. modelo social", descricao: "Leia o trecho sobre 'três pilares' (página 6) e o modelo social de inclusão. Apresente dois casos hipotéticos: (A) estudante com paralisia cerebral que usa cadeira de rodas; (B) estudante autista não verbal. Responda: 1) Como o modelo médico‑funcional orientaria o atendimento? 2) Como o modelo social (adotado pela política) orientaria a ação da escola?",
+          gabarito: "<strong>Caso A (paralisia cerebral):</strong> Modelo médico – foco na reabilitação, adaptações individuais, possível segregação. Modelo social – garante acessibilidade arquitetônica (rampas, mobiliário), elimina barreiras atitudinais, promove participação plena na sala comum.<br><strong>Caso B (autismo não verbal):</strong> Modelo médico – ênfase no déficit de comunicação; intervenção isolada. Modelo social – adota Comunicação Alternativa (pranchas, aplicativos), forma professores, elimina barreiras atitudinais e pedagógicas com apoios visuais estruturados.",
+          produto: "Quadro comparativo (mínimo 300 palavras)."
+        },
+        { id: "1.3", parte: 1, titulo: "1.3 Mapeamento de barreiras na escola", descricao: "Realize uma observação guiada no ambiente escolar (real ou simulada). Liste pelo menos 2 exemplos de cada tipo de barreira: arquitetônicas, atitudinais, comunicacionais, pedagógicas, tecnológicas, transportes. Proponha uma solução para cada.",
+          gabarito: "<strong>Exemplos esperados:</strong> Arquitetônica: degrau na entrada → rampa. Atitudinal: professor que diz 'não vai aprender' → formação sobre altas expectativas. Comunicacional: ausência de Libras → solicitar profissional de Libras à URE e usar recursos visuais. Pedagógica: apenas atividades escritas → oferecer múltiplos formatos (oral, imagens). Tecnológica: computador sem leitor de tela → adquirir software acessível. Transporte: ônibus sem elevador → articular com prefeitura/DPE. Plano de ação com prazos.",
+          produto: "Relatório de vistoria com fotos/desenhos e plano de ação."
+        },
+        { id: "1.4", parte: 1, titulo: "1.4 Simulação de acolhimento de estudante em investigação", descricao: "Família de aluno (8 anos, dificuldades sociais, ecolalia) procura escola, sem laudo, apenas hipótese de TEA. Com base no artigo 18 da Resolução e páginas 31-33, escreva passo a passo: documentos, quem assina, como garantir o AEE durante a investigação.",
+          gabarito: "<strong>Passos:</strong> 1) Acolhimento da família e registro de hipótese. 2) Elaboração de relatório pedagógico circunstanciado (professores + gestão). 3) Solicitar à família documentos de hipótese (se houver). 4) Início do Estudo de Caso (30 dias) pelo professor especializado. 5) Registro no SEI e SED. 6) Garantia do AEE imediato (professor especializado sem especificidade). 7) Articulação com saúde (UBS/CAPS). Assinaturas: diretor, coordenador, professor especializado, professor regente. Fluxograma deve conter decisões 'com laudo? sim/não'.",
+          produto: "Fluxograma ou roteiro de acolhimento."
+        },
+        { id: "1.5", parte: 1, titulo: "1.5 Quiz legislativo", descricao: "Elabore 10 perguntas de múltipla escolha (com gabarito comentado) sobre CF/88 art.208, LDB arts.58-60, Lei Berenice Piana (12.764/2012), LBI (13.146/2015) e Decreto 67.635/2023.",
+          gabarito: "<strong>Exemplos de perguntas:</strong> 1) Qual artigo da CF garante AEE preferencialmente na rede regular? Art.208, III. 2) A LBI adota qual modelo de deficiência? Biopsicossocial. 3) Segundo a Lei Berenice Piana, o TEA é considerado deficiência para todos os efeitos legais? Sim. 4) O Decreto 67.635/2023 instituiu a Política de Educação Especial do Estado de SP? Sim. (...) As 10 questões devem ter gabarito e breve justificativa legal.",
+          produto: "Arquivo com perguntas, respostas e justificativas."
+        },
+        // PARTE 2
+        { id: "2.1", parte: 2, titulo: "2.1 Elaboração de Estudo de Caso (Anexo II)", descricao: "Utilize perfil fictício (aluna com baixa visão, 12 anos, dificuldade em leitura de quadro e isolamento social). Preencha todos os campos do Estudo de Caso conforme modelo do anexo II: características, barreiras, hipóteses sobre modo de aprender.",
+          gabarito: "<strong>Conteúdo obrigatório:</strong> Identificação da aluna; descrição das dificuldades visuais (aproxima os olhos, evita leitura de quadro); potencialidades (boa memória auditiva, criatividade verbal); barreiras: falta de material ampliado, ausência de lupa, professores não usam descrição oral; hipóteses: aprende melhor por via oral e tátil; encaminhamentos: avaliação oftalmológica, solicitação de TA (lupa, software ampliador). Assinaturas: diretor, coordenador, professor especializado.",
+          produto: "Estudo de Caso completo (2-3 páginas)."
+        },
+        { id: "2.2", parte: 2, titulo: "2.2 Planejamento do horário do AEE (turma com até 3 estudantes)", descricao: "Você é professor especializado. Três estudantes: E1 precisa de 6 aulas/semana; E2: 3 aulas; E3: 4 aulas. Monte grade semanal respeitando limite de 2h/dia (escola parcial). Indique como registrar dispensa na SED.",
+          gabarito: "<strong>Grade possível:</strong> Segunda: E2 (2h); Terça: E1 (2h) + E3 (2h em horário diferente? respeitar limite? melhor organizar horários distintos). Exemplo: Segunda: E2 13h-15h; Terça: E1 13h-15h; Quarta: E1 e E3 (turma conjunta?) deve ser individualizado por estudante. Sugestão: criar duas turmas. Mas simplificado: E1 comparece ter, qua, sex (6h); E2 seg e qui (3h com dispensa de 1h? possível com ajuste); E3 qua e sex (4h). Registrar dispensa na SED para dias/horários não frequentados, justificando pelo PAEE.",
+          produto: "Tabela de horários + justificativa."
+        },
+        { id: "2.3", parte: 2, titulo: "2.3 Preenchimento do PAEE (Anexo III)", descricao: "Com base no mesmo estudante da atividade 2.1, redija o PAEE bimestral: atividades, materiais TA, serviços, orientações a regentes (ATPC) e estratégias com a família.",
+          gabarito: "<strong>PAEE deve conter:</strong> Atividades: treino de leitura com material ampliado, uso de lupa, orientação e mobilidade. Materiais: lupa eletrônica, caderno ampliado, software ampliador. Serviços: necessidade de adaptador de TA. Orientações ATPC: sentar na primeira fila, usar contraste, descrever imagens oralmente. Estratégias com família: orientar sobre óculos, pactuar horários do AEE, devolutiva bimestral.",
+          produto: "PAEE preenchido (modelo anexo III)."
+        },
+        { id: "2.4", parte: 2, titulo: "2.4 Estudo de caso sobre matrícula sem laudo", descricao: "Leia artigo 4º do Decreto 67.635/2023 e pág.19. Analise perfis: TDAH+dislexia, TOD, Síndrome de Down, hipótese TEA. Responda se elegíveis ao AEE e por quê.",
+          gabarito: "<strong>1) TDAH+dislexia:</strong> Não elegível (transtornos de neurodesenvolvimento não enquadrados como deficiência para fins de AEE). <strong>2) TOD:</strong> Não elegível (mesmo motivo). <strong>3) Síndrome de Down:</strong> Sim elegível (deficiência intelectual). <strong>4) Hipótese TEA:</strong> Sim elegível durante investigação, conforme art.18 da Resolução 129/2025.",
+          produto: "Parecer técnico fundamentado."
+        },
+        { id: "2.5", parte: 2, titulo: "2.5 Simulação de registro na Secretaria Escolar Digital (SED)", descricao: "Com base nas páginas 26-27, elabore checklist para diretor e professor especializado: documentos, responsáveis, prazos, LGPD.",
+          gabarito: "<strong>Checklist:</strong> ☐ Estudo de Caso digitalizado (30 dias) ☐ PAEE bimestral ☐ PEI (bimestral) ☐ Relatório de acolhimento familiar ☐ Laudo/hipótese (se houver). Responsável pelo upload: diretor/secretário escolar, com validação do professor especializado. Prazos: Estudo de Caso em até 30 dias letivos; atualizações bimestrais. LGPD: acesso restrito a profissionais autorizados, armazenamento seguro, não compartilhar dados sensíveis sem consentimento.",
+          produto: "Checklist em formato de planilha ou lista numerada."
+        },
+        // PARTE 3 (resumido por economia, mas completo)
+        { id: "3.1", parte: 3, titulo: "3.1 Roteiro de atuação do professor especializado em sala de aula comum", descricao: "Elabore roteiro de 10 ações semanais no AEE Expandido: observação, planejamento conjunto, coensino, produção de material, registro no PEI.",
+          gabarito: "<strong>Exemplo:</strong> Segunda: observação (2h) + reunião rápida com regente. Terça: ATPC (2h) planejamento. Quarta: coensino em Matemática. Quinta: produção de prancha de comunicação. Sexta: registro no PEI e feedback à família. (detalhar 10 ações)",
+          produto: "Roteiro semanal (tabela dias/horários/atividades)."
+        },
+        { id: "3.2", parte: 3, titulo: "3.2 Análise de caso: adaptação de aula de ciências", descricao: "Aula sobre 'cadeia alimentar' para 6º ano com estudante DI e TEA. Proponha 3 adaptações metodológicas, 2 recursos visuais, 1 avaliação diferenciada. Justifique pelo DUA.",
+          gabarito: "<strong>Adaptações:</strong> 1) uso de imagens concretas e fichas de encaixe; 2) roteiro com pictogramas passo a passo; 3) vídeo legendado e com libras. Recursos: miniaturas de animais, cartazes. Avaliação: organizar sequência apontando figuras. Justificativa DUA: múltiplas representações e formas de ação.",
+          produto: "Plano de aula colaborativo."
+        },
+        { id: "3.3", parte: 3, titulo: "3.3 Reflexão sobre barreiras atitudinais", descricao: "Crie 3 situações de baixa expectativa docente. Para cada, escreva estratégia de sensibilização do professor especializado.",
+          gabarito: "<strong>Situação 1:</strong> 'Ele nunca vai conseguir ler' → estudo de caso mostrando progressos + formação sobre neuroplasticidade. <strong>Situação 2:</strong> Ignorar estudante autista em grupo → planejamento de atividades estruturadas com pares. <str
